@@ -8,11 +8,10 @@ on:
 env:
   DOCKER_USR: ${{ secrets.DOCKER_USR }}
 
-permissions:  
-  contents: read
-
 jobs:
   generate-matrix:
+    permissions:
+      contents: read  # for actions/checkout to fetch code
     runs-on: ubuntu-latest
     if: github.repository == 'crossplane/crossplane'
     outputs:
@@ -133,4 +132,3 @@ jobs:
         with:
           sarif_file: 'trivy-results.sarif'
           category: ${{ matrix.image }}:${{ env.tag }}
-

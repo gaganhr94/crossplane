@@ -6,6 +6,8 @@ on:
 
 jobs:
   checklist-completed:
+    permissions:
+      pull-requests: read  # for reading PR checklist
     if: github.actor != 'crossplane-renovate[bot]'
     runs-on: ubuntu-24.04
     steps:

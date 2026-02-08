@@ -7,12 +7,11 @@ on:
   - cron: '15 1 * * *'
   workflow_dispatch: {}
 
-permissions:
-  issues: write
-  pull-requests: write
-
 jobs:
   stale:
+    permissions:
+      issues: write  # for labeling/commenting on issues
+      pull-requests: write  # for labeling/commenting on PRs
     runs-on: ubuntu-24.04
     steps:
     - uses: actions/stale@997185467fa4f803885201cee163a9f38240193d # v10
