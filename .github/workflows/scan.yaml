@@ -8,6 +8,9 @@ on:
 env:
   DOCKER_USR: ${{ secrets.DOCKER_USR }}
 
+permissions:
+  contents: read
+
 jobs:
   generate-matrix:
     permissions:
