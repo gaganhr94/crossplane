@@ -16,6 +16,8 @@ env:
 
 jobs:
   renovate:
+    permissions:
+      contents: read  # for actions/checkout to fetch code
     runs-on: ubuntu-latest
     if: |
       !github.event.repository.fork &&

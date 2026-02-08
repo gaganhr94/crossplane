@@ -23,6 +23,9 @@ env:
 
 jobs:
   promote:
+    permissions:
+      contents: read  # for actions/checkout to fetch code
+      packages: write  # for pushing to ghcr.io
     runs-on: ubuntu-24.04
 
     steps:
