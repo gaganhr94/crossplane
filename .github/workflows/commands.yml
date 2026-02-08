@@ -2,6 +2,9 @@ name: Comment Commands
 
 on: issue_comment
 
+permissions:
+  contents: read
+
 jobs:
   # NOTE(negz): See also backport.yml, which is the variant that triggers on PR
   # merge rather than on comment.

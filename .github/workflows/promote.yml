@@ -16,6 +16,9 @@ on:
         required: true
         default: false
 
+permissions:
+  contents: read
+
 env:
   DOCKER_USR: ${{ secrets.DOCKER_USR }}
   AWS_USR: ${{ secrets.AWS_USR }}

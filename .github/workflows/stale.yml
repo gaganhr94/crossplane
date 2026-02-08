@@ -7,6 +7,9 @@ on:
   - cron: '15 1 * * *'
   workflow_dispatch: {}
 
+permissions:
+  contents: read
+
 jobs:
   stale:
     permissions:
