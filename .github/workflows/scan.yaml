@@ -13,8 +13,6 @@ permissions:
 
 jobs:
   generate-matrix:
-    permissions:
-      contents: read  # for actions/checkout to fetch code
     runs-on: ubuntu-latest
     if: github.repository == 'crossplane/crossplane'
     outputs:
